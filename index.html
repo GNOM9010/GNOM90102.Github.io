@@ -75,120 +75,25 @@
 </div>
 
 
-<head>
-  <style>
-    /* โลโก้ */
-    .logo-img {
-      width: 150px;   /* ปรับความกว้าง */
-      height: auto;   /* ให้สูงปรับอัตโนมัติ */
-    }
-
-    /* แถบเมนู */
-    .nav {
-      background-color: #333;
-      padding: 10px 0;
-    }
-
-    .nav .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: white;
-      font-weight: bold;
-    }
-
-    .menu {
-      display: flex;
-      gap: 15px;
-    }
-
-    .menu a, 
-    .menu li {
-      list-style: none;
-      text-decoration: none;
-      color: white;
-      font-size: 16px;
-    }
-
-    /* ปุ่ม toggle (มือถือ) */
-    .nav-toggle {
-      display: none;
-      background: #555;
-      border: none;
-      color: white;
-      padding: 8px 12px;
-      cursor: pointer;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .menu {
-        display: none;
-        flex-direction: column;
-        background: #444;
-        padding: 10px;
-      }
-      .menu.show {
-        display: flex;
-      }
-      .nav-toggle {
-        display: block;
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- Topbar -->
-  <div class="topbar">
-    <div class="topbar-inner container">
-      <img src="image/4image.jpg" class="logo-img"/>
-    </div>
-  </div>
-
-  <!-- Navbar -->
-  <nav class="nav">
-    <div class="container">
-      <div class="nav-inner">
-        <div class="brand">
-          <span class="brand-badge" aria-hidden="true"></span>
-          <span>แผนกวิชาการตลาด</span>
-        </div>
-        <button class="nav-toggle" id="navToggle">เมนู</button>
-        <div class="menu" id="menu">
-          <a href="#home">หน้าหลัก</a>
-          <li class="nav-item">
-            <a class="nav-link link text-white text-primary display-5" 
-               href="page1.html" aria-expanded="false">
-              <span class="mbrib-user mbr-iconfont mbr-iconfont-btn"></span>
-              บุคลากร
-            </a>
-          </li>
-          <a href="#gallery">ภาพกิจกรรม</a>
-          <a href="#map">แผนที่</a>
-        </div>
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <div class="brand">
+        <span class="brand-badge" aria-hidden="true"></span>
+        <span>แผนกวิชาการตลาด</span>
+      </div>
+      <button class="nav-toggle" id="navToggle">เมนู</button>
+      <div class="menu" id="menu">
+        <a class="nav-link" href="#home">หน้าหลัก</a>
+        <a class="nav-link" href="page1.html">
+          <span class="mbrib-user mbr-iconfont mbr-iconfont-btn"></span> บุคลากร
+        </a>
+        <a class="nav-link" href="#gallery">ภาพกิจกรรม</a>
+        <a class="nav-link" href="#map">แผนที่</a>
       </div>
     </div>
-  </nav>
-
-  <script>
-    // Script สำหรับ toggle เมนู (มือถือ)
-    document.getElementById('navToggle').addEventListener('click', function() {
-      document.getElementById('menu').classList.toggle('show');
-    });
-  </script>
-</body>
+  </div>
+</nav>
 
   <header id="home" class="hero">
     <div class="container hero-grid">
