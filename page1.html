@@ -9,14 +9,14 @@
     :root{
       --bg:#0b1020; --card:#121830; --muted:#9aa4c7; --brand:#ff6600; --brand-2:#ff9966;
       --text:#e8ecff; --white:#fff; --shadow:0 10px 30px rgba(0,0,0,.25);
-    }
+    }                                                                                                                                                                          
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;font-family:"Kanit",sans-serif;background:var(--bg);color:var(--text);}
     a{color:inherit;text-decoration:none;}
     .container{width:min(1200px,92%);margin:auto;}
     .topbar{background:#0f152d;border-bottom:1px solid rgba(255,255,255,.06);}
     .topbar-inner{padding:8px 0;display:flex;justify-content:center;align-items:center;}
-    .logo-img{max-width:50px;max-height:50px;}
+    .logo-img{max-width:200px;max-height:200px;}
     .nav{position:sticky;top:0;z-index:50;background:rgba(11,16,32,.75);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08);}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;}
     .brand{display:flex;gap:12px;align-items:center;font-weight:700;}
@@ -36,68 +36,102 @@
     .grid{display:grid;gap:20px;}
     .grid.three{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}
     footer{background:#0f152d;border-top:1px solid rgba(255,255,255,.06);padding:30px 0;color:#c8d0f4;}
+
+    /* ปรับขนาดรูปใน card ให้เท่ากัน */
+    .card img {
+      width: 100%;
+      height: 250px;       /* ความสูงเท่ากัน */
+      object-fit: cover;   /* ครอบตัดรูปให้เต็มกรอบ */
+      border-radius: 12px; /* ปรับขอบโค้งสวย */
+      display: block;
+    }
   </style>
 </head>
 <body>
-  <div class="topbar">
-    <div class="topbar-inner container">
-      <img src="image/4image.jpg" class="logo-img"/>
+
+<div class="topbar">
+  <div class="topbar-inner container">
+    <img src="image/4image.jpg" class="logo-img"/>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <div class="brand">
+        <span class="brand-badge"></span>
+        <span>แผนกวิชาการตลาด</span>
+      </div>
+      <button class="nav-toggle" id="navToggle">เมนู</button>
+      <div class="menu" id="menu">
+        <a href="index.html">หน้าหลัก</a>
+        <a href="page1.html" style="color:var(--white);font-weight:600;">บุคลากร</a>
+        <a href="index.html#gallery">ภาพกิจกรรม</a>
+        <a href="index.html#map">แผนที่</a>
+      </div>
     </div>
   </div>
+</nav>
 
-  <nav class="nav">
-    <div class="container">
-      <div class="nav-inner">
-        <div class="brand">
-          <span class="brand-badge"></span>
-          <span>แผนกวิชาการตลาด</span>
-        </div>
-        <button class="nav-toggle" id="navToggle">เมนู</button>
-        <div class="menu" id="menu">
-          <a href="index.html">หน้าหลัก</a>
-          <a href="page1.html" style="color:var(--white);font-weight:600;">บุคลากร</a>
-          <a href="index.html#gallery">ภาพกิจกรรม</a>
-          <a href="index.html#map">แผนที่</a>
-        </div>
+<section>
+  <div class="container">
+    <h1>บุคลากร แผนกวิชาการตลาด</h1>
+    <div class="grid three">
+      <div class="card">
+        <img src="image/16image T.jpg" alt="ครู ก">
+        <h2>นางสาวโศภชา เผือกอุ่มรดาภา</h2>
+        <p>หัวหน้าแผนกวิชาการตลาด</p>
+        <p>เบอร์ติดต่อ 083-083-6535</p>
+      </div>
+      <div class="card">
+        <img src="image/17image T.jpg" alt="ครู ข">
+        <h2>นายณัฐวิทย์ อุ้มรัมย์</h2>
+        <p>ครูแผนกวิชาการตลาด</p>
+        <p>เบอร์ติดต่อ 083-909-4069</p>
+      </div>
+      <div class="card">
+        <img src="image/18image T.jpg" alt="ครู ค">
+        <h2>นางกัญฐณา หงษ์บุญมี</h2>
+        <p>ครูแผนกวิชาการตลาด</p>
+        <p>เบอร์ติดต่อ 063-146-9259</p>
+        
       </div>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <section>
-    <div class="container">
-      <h1>บุคลากร แผนกวิชาการตลาด</h1>
-      <div class="grid three">
-        <div class="card">
-          <img src="image/teacher1.jpg" alt="ครู ก">
-          <h2>อาจารย์ ก</h2>
-          <p>หัวหน้าแผนกวิชาการตลาด</p>
-        </div>
-        <div class="card">
-          <img src="image/teacher2.jpg" alt="ครู ข">
-          <h2>อาจารย์ ข</h2>
-          <p>ผู้สอนวิชาการตลาดเชิงกลยุทธ์</p>
-        </div>
-        <div class="card">
-          <img src="image/teacher3.jpg" alt="ครู ค">
-          <h2>อาจารย์ ค</h2>
-          <p>ผู้สอนวิชาการขายและพฤติกรรมผู้บริโภค</p>
-        </div>
+<section>
+  <div class="container">
+    <div class="grid three">
+      <div class="card">
+        <img src="image/19image T.jpg" alt="ครู ง">
+        <h2>นางสาวณภัทร กังสุกุล</h2>
+        <p>ครูแผนกวิชาการตลาด</p>
+        <p>เบอร์ติดต่อ 083-909-4069</p>
+      </div>
+      <div class="card">
+        <img src="image/20image T.jpg" alt="ครู จ">
+        <h2>นางสาวณัฐทริกา สัจวาที</h2>
+        <p>ครูแผนกวิชาการตลาด</p>
+        <p>เบอร์ติดต่อ 083-083-6535</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
-      <div>© <span id="year"></span> แผนกวิชาการตลาด</div>
-      <div class="muted">สร้างเว็บด้วย HTML/CSS</div>
-    </div>
-  </footer>
+<footer>
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+    <div>© <span id="year"></span> แผนกวิชาการตลาด</div>
+    <div class="muted">สร้างเว็บด้วย HTML/CSS</div>
+  </div>
+</footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const navToggle = document.getElementById('navToggle');
-    const menu = document.getElementById('menu');
-    if(navToggle){ navToggle.addEventListener('click', ()=> menu.classList.toggle('open')); }
-  </script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const navToggle = document.getElementById('navToggle');
+  const menu = document.getElementById('menu');
+  if(navToggle){ navToggle.addEventListener('click', ()=> menu.classList.toggle('open')); }
+</script>
+
 </body>
 </html>
