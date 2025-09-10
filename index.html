@@ -88,12 +88,51 @@
         <a class="nav-link" href="page1.html">
           <span class="mbrib-user mbr-iconfont mbr-iconfont-btn"></span> บุคลากร
         </a>
-</li><li class="nav-item dropdown"><a class="nav-link link text-white text-primary dropdown-toggle display-5" href="#" data-toggle="dropdown-submenu" aria-expanded="false"><span class="mbrib-photos mbr-iconfont mbr-iconfont-btn"></span>ภาพกิจกรรม</a><div class="dropdown-menu"><a class="text-white text-primary dropdown-item display-5" href="page2.html">บริการวิชาชีพ
+
+        <!-- Dropdown -->
+        <div class="nav-item dropdown">
+          <a class="nav-link link text-white text-primary dropdown-toggle display-5" href="#" id="galleryDropdown">
+            <span class="mbrib-photos mbr-iconfont mbr-iconfont-btn"></span> ภาพกิจกรรม
+          </a>
+          <div class="dropdown-menu" id="galleryMenu">
+            <a class="text-white text-primary dropdown-item display-5" href="page4.html">บริการวิชาชีพ</a>
+          </div>
+        </div>
+        <!-- จบ Dropdown -->
+
         <a class="nav-link" href="#map">แผนที่</a>
       </div>
     </div>
   </div>
 </nav>
+
+<!-- สคริปต์ควบคุมการเก็บ/แสดง -->
+<script>
+  document.getElementById("galleryDropdown").addEventListener("click", function(e) {
+    e.preventDefault();
+    document.getElementById("galleryMenu").classList.toggle("show");
+  });
+</script>
+
+<style>
+  .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    background: #222;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .dropdown-menu a {
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-menu.show {
+    display: flex;
+  }
+</style>
 
 
 <style>
