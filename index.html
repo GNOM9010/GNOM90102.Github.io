@@ -127,7 +127,7 @@
     .eyebrow { color:var(--brand-2); font-weight:700; font-size:14px; text-transform:uppercase; }
     .hero h1 { font-size:clamp(28px,4vw,44px); line-height:1.15; margin:8px 0 14px; }
     .lead { color:#c8d0f4; font-size:clamp(16px,2.1vw,18px); }
-    .cta { margin-top:18px; display:flex; gap:12px; }
+    .cta { margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; }
     .btn {
       padding:10px 16px;
       border-radius:12px;
@@ -214,6 +214,7 @@
           <a class="nav-link" href="#home">หน้าหลัก</a>
           <a class="nav-link" href="page1.html">บุคลากร</a>
           <a class="nav-link" href="page2.html">ภาพกิจกรรม</a>
+          <a class="nav-link" href="#projects">ภาพโครงงานปี 68</a>
           <a class="nav-link" href="#map">แผนที่</a>
         </div>
       </div>
@@ -227,9 +228,6 @@
         <div class="eyebrow">วิทยาลัยเทคนิคจันทบุรี</div>
         <h1>แผนกวิชาการตลาด</h1>
         <p class="lead">มุ่งผลิตบุคลากรด้านการตลาดที่มีทักษะการวิเคราะห์และกลยุทธ์ธุรกิจยุคใหม่</p>
-        <div class="cta">
-          <a class="btn primary" href="#overview">ดูหลักสูตร</a>
-        </div>
       </div>
       <img src="image/10image.jpg" class="hero-img" alt="ภาพกิจกรรม">
     </div>
@@ -272,6 +270,13 @@
     if(navToggle){
       navToggle.addEventListener('click', () => menu.classList.toggle('open'));
     }
+
+    // ปิดเมนูอัตโนมัติเมื่อกดลิงก์ (เสถียรขึ้น)
+    document.querySelectorAll('.menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('open');
+      });
+    });
   </script>
 </body>
 </html>
