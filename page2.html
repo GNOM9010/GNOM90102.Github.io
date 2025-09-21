@@ -3,134 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>บุคลากร – แผนกวิชาการตลาด</title>
+  <title>โชว์ภาพ – แผนกวิชาการตลาด</title>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0b1020; --card:#121830; --muted:#9aa4c7; --brand:#ff6600; --brand-2:#ff9966;
-      --text:#e8ecff; --white:#fff; --shadow:0 10px 30px rgba(0,0,0,.25);
-    }                                                                                                                                                                          
+      --bg:#0b1020; --card:#121830; --text:#e8ecff; --white:#fff;
+      --shadow:0 10px 30px rgba(0,0,0,.25);
+    }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;font-family:"Kanit",sans-serif;background:var(--bg);color:var(--text);}
-    a{color:inherit;text-decoration:none;}
     .container{width:min(1200px,92%);margin:auto;}
-    .topbar{background:#0f152d;border-bottom:1px solid rgba(255,255,255,.06);}
-    .topbar-inner{padding:8px 0;display:flex;justify-content:center;align-items:center;}
-    .logo-img{max-width:200px;max-height:200px;}
-    .nav{position:sticky;top:0;z-index:50;background:rgba(11,16,32,.75);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08);}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;}
-    .brand{display:flex;gap:12px;align-items:center;font-weight:700;}
-    .brand-badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:var(--shadow);}
-    .menu{display:flex;gap:18px;flex-wrap:wrap;}
-    .menu a{padding:8px 10px;border-radius:10px;color:var(--muted);}
-    .menu a:hover{color:var(--white);background:rgba(255,255,255,.06);}
-    .nav-toggle{display:none;}
-    @media (max-width:900px){
-      .menu{display:none;}
-      .nav-toggle{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid rgba(255,255,255,.12);border-radius:10px;background:transparent;color:var(--text);}
-      .menu.open{display:flex;flex-direction:column;gap:8px;padding:12px;margin-top:10px;background:rgba(18,24,48,.9);border:1px solid rgba(255,255,255,.08);border-radius:14px;}
-    }
     section{padding:56px 0;}
-    h1,h2{margin-bottom:18px;}
-    .card{background:var(--card);padding:20px;border-radius:18px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08);}
+    h1{margin-bottom:18px;text-align:center;}
+    .card{background:var(--card);padding:10px;border-radius:18px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08);}
     .grid{display:grid;gap:20px;}
-    .grid.three{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}
-    footer{background:#0f152d;border-top:1px solid rgba(255,255,255,.06);padding:30px 0;color:#c8d0f4;}
-
-    /* ปรับขนาดรูปใน card ให้เท่ากัน */
+    .grid.four{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
     .card img {
       width: 100%;
       height: 250px;       /* ความสูงเท่ากัน */
-      object-fit: cover;   /* ครอบตัดรูปให้เต็มกรอบ */
-      border-radius: 12px; /* ปรับขอบโค้งสวย */
+      object-fit: cover;   /* ครอบตัดรูป */
+      border-radius: 12px;
       display: block;
     }
+    footer{background:#0f152d;border-top:1px solid rgba(255,255,255,.06);padding:30px 0;color:#c8d0f4;text-align:center;}
   </style>
 </head>
 <body>
 
-<div class="topbar">
-  <div class="topbar-inner container">
-    <img src="image/4image.jpg" class="logo-img"/>
-  </div>
-</div>
-
-<nav class="nav">
-  <div class="container">
-    <div class="nav-inner">
-      <div class="brand">
-        <span class="brand-badge"></span>
-        <span>แผนกวิชาการตลาด</span>
-      </div>
-      <button class="nav-toggle" id="navToggle">เมนู</button>
-      <div class="menu" id="menu">
-        <a href="index.html">หน้าหลัก</a>
-        <a href="page1.html" style="color:var(--white);font-weight:600;">บุคลากร</a>
-        <a href="index.html#gallery">ภาพกิจกรรม</a>
-        <a href="index.html#map">แผนที่</a>
-      </div>
-    </div>
-  </div>
-</nav>
-
 <section>
   <div class="container">
-    <h1>บุคลากร แผนกวิชาการตลาด</h1>
-    <div class="grid three">
-      <div class="card">
-        <img src="image/16image T.jpg" alt="ครู ก">
-        <h2>นางสาวโศภชา เผือกอุ่มรดาภา</h2>
-        <p>หัวหน้าแผนกวิชาการตลาด</p>
-        <p>เบอร์ติดต่อ 083-083-6535</p>
-      </div>
-      <div class="card">
-        <img src="image/17image T.jpg" alt="ครู ข">
-        <h2>นายณัฐวิทย์ อุ้มรัมย์</h2>
-        <p>ครูแผนกวิชาการตลาด</p>
-        <p>เบอร์ติดต่อ 083-909-4069</p>
-      </div>
-      <div class="card">
-        <img src="image/18image T.jpg" alt="ครู ค">
-        <h2>นางกัญฐณา หงษ์บุญมี</h2>
-        <p>ครูแผนกวิชาการตลาด</p>
-        <p>เบอร์ติดต่อ 063-146-9259</p>
-        
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="grid three">
-      <div class="card">
-        <img src="image/19image T.jpg" alt="ครู ง">
-        <h2>นางสาวณภัทร กังสุกุล</h2>
-        <p>ครูแผนกวิชาการตลาด</p>
-        <p>เบอร์ติดต่อ 083-909-4069</p>
-      </div>
-      <div class="card">
-        <img src="image/20image T.jpg" alt="ครู จ">
-        <h2>นางสาวณัฐทริกา สัจวาที</h2>
-        <p>ครูแผนกวิชาการตลาด</p>
-        <p>เบอร์ติดต่อ 083-083-6535</p>
-      </div>
+    <h1>โชว์ภาพ แผนกวิชาการตลาด</h1>
+    <div class="grid four">
+      <!-- รูปภาพ 1-20 -->
+      <div class="card"><img src="image/1R.jpg" alt="ภาพ 1"></div>
+      <div class="card"><img src="image/2R.jpg" alt="ภาพ 2"></div>
+      <div class="card"><img src="image/3R.jpg" alt="ภาพ 3"></div>
+      <div class="card"><img src="image/4R.jpg" alt="ภาพ 4"></div>
+      <div class="card"><img src="image/5R.jpg" alt="ภาพ 5"></div>
+      <div class="card"><img src="image/6R.jpg" alt="ภาพ 6"></div>
+      <div class="card"><img src="image/7R.jpg" alt="ภาพ 7"></div>
+      <div class="card"><img src="image/8R.jpg" alt="ภาพ 8"></div>
+      <div class="card"><img src="image/9R.jpg" alt="ภาพ 9"></div>
+      <div class="card"><img src="image/10R.jpg" alt="ภาพ 10"></div>
+      <div class="card"><img src="image/11R.jpg" alt="ภาพ 11"></div>
+      <div class="card"><img src="image/12R.jpg" alt="ภาพ 12"></div>
+      <div class="card"><img src="image/13R.jpg" alt="ภาพ 13"></div>
+      <div class="card"><img src="image/14R.jpg" alt="ภาพ 14"></div>
+      <div class="card"><img src="image/15R.jpg" alt="ภาพ 15"></div>
+      <div class="card"><img src="image/16R.jpg" alt="ภาพ 16"></div>
+      <div class="card"><img src="image/17R.jpg" alt="ภาพ 17"></div>
+      <div class="card"><img src="image/18R.jpg" alt="ภาพ 18"></div>
+      <div class="card"><img src="image/19R.jpg" alt="ภาพ 19"></div>
+      <div class="card"><img src="image/20R.jpg" alt="ภาพ 20"></div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
-    <div>© <span id="year"></span> แผนกวิชาการตลาด</div>
-    <div class="muted">สร้างเว็บด้วย HTML/CSS</div>
-  </div>
+  © <span id="year"></span> แผนกวิชาการตลาด
 </footer>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
-  const navToggle = document.getElementById('navToggle');
-  const menu = document.getElementById('menu');
-  if(navToggle){ navToggle.addEventListener('click', ()=> menu.classList.toggle('open')); }
 </script>
 
 </body>
